@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .active {
+            color: red;
+            padding: 10px 14px;
+            border: 3px solid whitesmoke;
+            max-width: fit-content;
+            border-radius: 4px;
+            transition: all;
+            background-color: lightpink;
+        }
+    </style>
+</head>
+
+<body>
+    <p>[12, 73, 89, 95, 98,32]</p>
+    <button onclick="sortAsc(event)">Ascending</button> <p id="asc"></p>
+    <button onclick="sortDesc(event)">Descending</button> <p id="desc"></p>
+
+    <script>
+        const data=[12, 73, 89, 95, 98,32];
+        function sortAsc(event){
+            event.preventDefault()
+            data.sort((a,b) => a - b)
+            document.getElementById("asc").innerHTML = data
+            document.getElementById("asc").classlist.add("active")
+
+
+        }
+        function sortDesc(){
+            event.preventDefault()
+            data.sort((a,b) => b - a)
+            document.getElementById("desc").innerHTML = data
+            document.getElementById("desc").classlist.add("active")
+        }
+    </script>
+</body>
+
+</html>
