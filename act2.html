@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .active {
+            color: red;
+            padding: 10px 14px;
+            border: 3px solid whitesmoke;
+            max-width: fit-content;
+            border-radius: 4px;
+            transition: all;
+            background-color: lightpink;
+        }
+    </style>
+
+
+
+</head>
+
+<body>
+    <p>["sunday", "monday", "tuesday", "wednesday", "thursday", "friday", "saturday"]</p>
+    <button onclick="testMapRev (event)">TEST MAP</button>
+    <p id="display"></p>
+    <script>
+        const week = ["sunday ", "monday ", "tuesday ", "wednesday ", "thursday ", "friday ", "saturday "];
+
+        function testMapRev(event) {
+            event.preventDefault();
+            const weekRev = week.map((day) => day
+                .toUpperCase()
+            );
+            document.getElementById("display").innerHTML = weekRev;
+            document.getElementById("display").classList.add("active");
+
+
+        }
+    </script>
+
+</body>
+
+</html>
