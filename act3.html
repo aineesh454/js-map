@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eval</title>
+</head>
+<body>
+
+
+      <form action="" onsubmit="calc(event)">
+        <input type="text" name="" id="val1">
+        <input type="text" name="" id="val2">
+        <input type="submit" value="Eval">
+      </form>
+
+
+      <h2>Result of Addition</h2>
+      <p id="result1"></p>
+     
+     
+      <h2>Result of Subtraction</h2>
+      <p id="result2"></p>
+     
+      <h2>Result of Multiplication</h2>
+      <p id="result3"></p>
+
+
+      <script>
+
+
+        function calc(event) {
+          event.preventDefault();
+          const val1 = document.getElementById("val1").value;
+          const val2 = document.getElementById("val2").value;
+         
+          var result1 = eval(val1 + " + "+ val2)+ "<br>";
+          document.getElementById("result1").innerHTML = result1;
+         
+          var result2 = eval(val1 + " - "+ val2)+ "<br>";
+          document.getElementById("result2").innerHTML += result2;
+         
+          var result3 = eval(val1 + " * "+ val2)+ "<br>";
+          document.getElementById("result3").innerHTML += result3;
+       
+        }
+
+
+      </script>
+   
+</body>
+</html>
+
